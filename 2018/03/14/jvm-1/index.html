@@ -117,7 +117,7 @@
 <meta name="description" content="Java运行时数据区 线程私有：  程序计数器：当前线程所执行的字节码的行号指示器。字节码解释器通过程序计数器的值来取下一条需要执行的字节码指令。 虚拟机栈：虚拟机栈描述的是Java方法执行的内存模型，用于存储局部变量表、操作数栈、动态链接、方法出口等信息。局部变量变存放各种基本数据类型（boolean、byte、char、short、int、float、long、double）和对象引用（引用指">
 <meta name="keywords" content="JVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JVM笔记：自动内存管理机制">
+<meta property="og:title" content="JVM笔记（一）：自动内存管理机制">
 <meta property="og:url" content="http://yoursite.com/2018/03/14/jvm-1/index.html">
 <meta property="og:site_name" content="XieHao&#39;s Blog">
 <meta property="og:description" content="Java运行时数据区 线程私有：  程序计数器：当前线程所执行的字节码的行号指示器。字节码解释器通过程序计数器的值来取下一条需要执行的字节码指令。 虚拟机栈：虚拟机栈描述的是Java方法执行的内存模型，用于存储局部变量表、操作数栈、动态链接、方法出口等信息。局部变量变存放各种基本数据类型（boolean、byte、char、short、int、float、long、double）和对象引用（引用指">
@@ -126,9 +126,9 @@
 <meta property="og:image" content="http://p5ks54q34.bkt.clouddn.com/jvm2.jpg">
 <meta property="og:image" content="http://p5ks54q34.bkt.clouddn.com/jvm1/jjvm3.jpg">
 <meta property="og:image" content="http://p5ks54q34.bkt.clouddn.com/jvm1/jjvm4.jpg">
-<meta property="og:updated_time" content="2018-03-14T11:51:55.781Z">
+<meta property="og:updated_time" content="2018-03-19T07:14:01.906Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JVM笔记：自动内存管理机制">
+<meta name="twitter:title" content="JVM笔记（一）：自动内存管理机制">
 <meta name="twitter:description" content="Java运行时数据区 线程私有：  程序计数器：当前线程所执行的字节码的行号指示器。字节码解释器通过程序计数器的值来取下一条需要执行的字节码指令。 虚拟机栈：虚拟机栈描述的是Java方法执行的内存模型，用于存储局部变量表、操作数栈、动态链接、方法出口等信息。局部变量变存放各种基本数据类型（boolean、byte、char、short、int、float、long、double）和对象引用（引用指">
 <meta name="twitter:image" content="http://p5ks54q34.bkt.clouddn.com/jvm1/jvm1.jpg">
 
@@ -166,7 +166,7 @@
 
 
 
-  <title>JVM笔记：自动内存管理机制 | XieHao's Blog</title>
+  <title>JVM笔记（一）：自动内存管理机制 | XieHao's Blog</title>
   
 
 
@@ -353,7 +353,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JVM笔记：自动内存管理机制</h1>
+          <h1 class="post-title" itemprop="name headline">JVM笔记（一）：自动内存管理机制</h1>
         
 
         <div class="post-meta">
@@ -520,8 +520,9 @@
 <h2 id="垃圾收集算法"><a href="#垃圾收集算法" class="headerlink" title="垃圾收集算法"></a>垃圾收集算法</h2><h3 id="标记-清除算法"><a href="#标记-清除算法" class="headerlink" title="标记-清除算法"></a>标记-清除算法</h3><p>标记-清除（Mark-Sweep）算法分为标记和清除两个阶段：</p>
 <ol>
 <li>标记出所有需要回收的对象，一般用可达性分析算法进行标记。</li>
-<li>对所有被标记的对象进行统一回收。<br>这种算法的不足主要有两个：</li>
+<li>对所有被标记的对象进行统一回收。  </li>
 </ol>
+<p>这种算法的不足主要有两个：</p>
 <ul>
 <li>效率问题。标记、清除的效率都不高。</li>
 <li>空间问题。标记清除后会产生大量不连续的内存碎片。</li>
